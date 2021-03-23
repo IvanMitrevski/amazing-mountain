@@ -1,5 +1,35 @@
-/*font-family: 'Raleway', sans-serif;*/
+/*
+=============== 
+Variables
+===============
+*/
+
+:root{
+  --clr-primary: rgba(28, 186, 157, 1);
+  --clr-dark: rgba(4, 29, 52, 1);
+  --clr-light: rgba(252, 254, 255, 1);
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::before,
+::after{
+  box-sizing: border-box;
+}
 
 body{
-  background: gray;
+  font-family: 'Raleway', sans-serif;
+  /*Default font size is 16px. So 1.125rem is 18px*/
+  font-size: 1.125rem;
+  color: var(--clr-dark);
+  /*Line height in pixels / font size = unitless line height number*/
+  line-height: 1.7;
 }
