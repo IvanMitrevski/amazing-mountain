@@ -11,6 +11,7 @@ Variables
   --fw-normal: 400;
   --fw-bold: 700;
   --fw-black: 900;
+  --grid: 1fr;
 }
 
 /*
@@ -26,10 +27,186 @@ Global Styles
 }
 
 body{
+  margin: 0;
   font-family: 'Raleway', sans-serif;
   /*Default font size is 16px. So 1.125rem is 18px*/
   font-size: 1.125rem;
   color: var(--clr-dark);
   /*Line height in pixels / font size = unitless line height number*/
   line-height: 1.7;
+
 }
+
+header{
+  background-color: var(--clr-light);
+  text-align: center;
+}
+
+h1, h2, h3{ 
+  line-height: 1;
+}
+
+/*
+=============== 
+global classes
+===============
+*/
+
+/* buttons */
+.btn{
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  padding: .5em 1.25em;
+  margin-bottom: .75em;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all .2s ease;
+
+}
+
+.btn-primary{
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+}
+
+.btn-primary:hover{
+  background-color: var(--clr-dark);
+}
+
+.btn-secondary{
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+}
+
+.btn-secondary:hover{
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+/* navigation */
+.nav-list{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0; 
+  padding: 1em;
+  list-style: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+}
+
+.logo{
+  padding-top: 1em;
+  
+}
+
+.nav_link{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* weather widget */
+.weather_icon{
+  display: flex;
+  padding: .5em;
+  grid-row: span 2;
+  background-color: var(--clr-primary);
+}
+
+/*dark weather widget
+.weather{
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+.weather_info{
+  margin: 0;
+  margin-left: .5em;
+  font-feature-settings: 'pnum' on, 'lnum' on; 
+  font-size: .8rem;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1px;
+  color: rgba(252, 254, 255, 0.7);
+}
+
+.weather_info span{
+  font-weight: var(--fw-bold);
+  color: var(--clr-light);
+}
+
+.weather_info:first-of-type{
+  margin-top: .5rem;
+}
+ */
+
+
+/*light weather widget*/
+.weather{
+  display: grid;
+  grid-template-columns: min-content var(--grid);
+  background: var(--clr-light);
+}
+
+.weather-info{
+border: 3px solid var(--clr-primary);
+
+}
+
+.weather_info{
+  margin: 0;
+  margin-left: .4em;
+  font-feature-settings: 'pnum' on, 'lnum' on; 
+  font-size: .9rem;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--clr-dark);
+  letter-spacing: 1px;
+
+}
+
+.weather_info span{
+  font-weight: var(--fw-bold);
+  font-size: 1.1rem;
+}
+
+.weather_info:first-of-type{
+  margin-top: .3rem;
+}
+.weather_info:last-of-type{
+  margin-bottom: .3rem;
+}
+
+
+/* main content */
+.main{
+  padding: 3em;
+  
+}
+
+.main-ski{
+  background-image: url(../images/asoggetti-xqBllPa7XEs-unsplash.jpg);
+  background-size: cover;
+}
+
+.main-title{
+
+  font-weight: var(--fw-black);
+  font-size: 3rem;
+}
+
+.main-intro{
+  background: rgba(255, 255, 255, 0.150);
+  line-height: 1.7;
+  font-weight: var(--fw-bold);
+  font-size: 1.3rem;
+}
+
+
+ 
